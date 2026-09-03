@@ -13,7 +13,9 @@
 7. permite repetir o jogo; 
 8. chamar o histórico e controla a interação do usuário com a UI.
 <br>
+
 ## View
+
 ### Operações da View:
 
 1. 
