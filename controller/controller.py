@@ -1,4 +1,4 @@
-
+from rich import print
 from typing import Optional, Tuple, Union
 from entidades.jogador import Jogador
 from entidades.board import Board
@@ -27,7 +27,7 @@ class Controller:
 
         pygame.mixer.init()
 
-        self.tocar_musica_fundo("music/50Cent.mp3")
+        self.tocar_musica_fundo("music/cartoon.mp3")
 
 
     def tocar_musica_fundo(self, caminho_arquivo: str):
@@ -36,7 +36,7 @@ class Controller:
 
             pygame.mixer.music.play(-1)
            
-            pygame.mixer.music.set_volume(0.1)
+            pygame.mixer.music.set_volume(.3)
         except Exception as e:
            print(f"Erro ao carregar áudio: {e}")
             
