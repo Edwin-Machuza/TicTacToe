@@ -9,4 +9,4 @@ The game starts with an (X). The game ends when one of the players manages to ma
 
 It should also allow viewing the history of all games played.<br>  
 
-My idea was to be as most close as possible of the MVC.
+My idea was to be as most close as possible of the MVC(Model-View-Controller) pattern.
