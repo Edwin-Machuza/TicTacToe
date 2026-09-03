@@ -1,4 +1,4 @@
-# <span style="color:red;"> Descrição de cada componente do modelo usado</span>
+# <span style="color:red;"> Descrição de cada componente do modelo usado (MVC)</span>
 
 
 ## Controller
@@ -12,3 +12,8 @@
 6. inicia a reprodução da música;
 7. permite repetir o jogo; 
 8. chamar o histórico e controla a interação do usuário com a UI.
+<br>
+## View
+### Operações da View:
+
+1. 
