@@ -46,7 +46,7 @@ class Menu:
 
     def _handle_historico_click(self) -> None:
         if self._on_historico_click:
-            self._on_historico_click()  # Corrigido: Parênteses adicionados
+            self._on_historico_click()
 
     def _handle_terminar_click(self) -> None:
         if self._on_terminar_click:
