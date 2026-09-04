@@ -1,4 +1,4 @@
-from rich import print
+
 from typing import Optional, Tuple, Union
 from entidades.jogador import Jogador
 from entidades.board import Board
