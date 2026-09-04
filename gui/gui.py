@@ -1,8 +1,8 @@
-
+import sys
 import tkinter as tk
 from tkinter import messagebox, simpledialog
 from typing import List, Tuple, Callable, Optional
-
+from time import time
 from menu.menu import Menu
 from validacoes.validacoes import validate_name
 
@@ -27,6 +27,12 @@ class GUI:
         self._construir_tabuleiro()
 
         self.menu = Menu(self.root, columnspan=self.TAMANHO)
+
+
+
+
+    def mostrar_tela_inicial(self):
+        pass
 
 
     def set_on_casa_click(self, callback: Callable[[int, int], None]) -> None:
@@ -64,10 +70,16 @@ class GUI:
             nome = simpledialog.askstring(
                 "Jogador", f"Nome do jogador {numero_jogador}:", parent=self.root
             )
-            valido, mensagem = validate_name(nome)
-            if valido:
-                return nome
-            messagebox.showwarning("Nome inválido", mensagem, parent=self.root)
+            if nome is None:
+                resposta = messagebox.askokcancel("Escape Door", "Deseja sair?")
+                if resposta:
+                    sys.exit(0)
+                else:
+                    valido, mensagem = validate_name(nome)
+                    if valido:
+                        return nome
+                    messagebox.showwarning("Nome inválido", mensagem, parent=self.root)
+
 
     def atualizar_casa(self, linha: int, coluna: int, simbolo: str) -> None:
         self._buttons[linha][coluna].config(text=simbolo, state="disabled")
@@ -87,6 +99,11 @@ class GUI:
 
     def mostrar_mensagem_fim(self, texto: str) -> None:
         messagebox.showinfo("Fim de jogo", texto, parent=self.root)
+
+
+    def alterar_musica_fundo(self):
+        pass
+
 
     def mostrar_menu_final(self) -> None:
         self.board_frame.grid_remove()

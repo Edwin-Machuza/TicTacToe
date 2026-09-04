@@ -4,7 +4,7 @@ from typing import Callable, Optional
 
 class Menu:
 
-    def __init__(self, container: tk.Widget, columnspan: int):
+    def __init__(self, container: tk.Tk, columnspan: int):
         self._columnspan = columnspan
         self.frame = tk.Frame(container)
 

@@ -27,21 +27,28 @@ class Controller:
 
         pygame.mixer.init()
 
-        self.tocar_musica_fundo("music/cartoon.mp3")
+        self.tocar_musica_fundo("music/50Cent.mp3")
 
 
-    def tocar_musica_fundo(self, caminho_arquivo: str):
+    @staticmethod
+    def tocar_musica_fundo( caminho_arquivo: str):
         try:
             pygame.mixer.music.load(caminho_arquivo)
 
             pygame.mixer.music.play(-1)
            
-            pygame.mixer.music.set_volume(.3)
+            pygame.mixer.music.set_volume(.4)
         except Exception as e:
            print(f"Erro ao carregar áudio: {e}")
+
+
+    @staticmethod
+    def alterar_musica_fundo(escolha:int):
+        pass
             
             
     def iniciar_jogo(self):
+        self.gui.mostrar_tela_inicial()
         nome1 = self.gui.pedir_nome(1)
         nome2 = self.gui.pedir_nome(2)
 
